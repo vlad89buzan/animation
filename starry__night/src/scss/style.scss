@@ -1,0 +1,196 @@
+@import "normalize";
+@import "var";
+// @import "fonts";
+//@import "mixins";
+// @import 'blocks/header';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+main {
+  flex: 1 1 100%;
+  position: relative;
+}
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#111425, #3751e0);
+  background-attachment: fixed;
+  overflow: hidden;
+  &.active {
+    background: linear-gradient(#ffeb3b, #ff9800);
+    i{
+      display: none;
+    }
+    .moon {
+      @media screen and (min-width: $bp480) {
+        transform: translateX(-150%);
+
+      }
+     transform: translateX(-75%);
+     box-shadow: 0 0 0 20px rgba(255,255,255,0.5),
+     0 0 0 40px rgba(255,255,255,0.5),
+     0 0 0 60px rgba(255,255,255,0.3),
+     0 0 0 100px rgba(255,255,255,0.2),
+     0 0 0 140px rgba(255,255,255,0.2);
+     
+      &::before {
+        opacity: 0;
+       
+      }
+    }
+    .forest{
+      transform: translateY(110%);
+    }
+    .bg{
+      transform: translateY(0%);
+    }
+    &::before{
+      transform: translateY(0%);
+    }
+  }
+  &::before{
+    position: absolute;
+    content: '';
+    bottom: 0;left: 0;
+    width: 100%;height: 250px;
+    transition: 0.5s;
+    background: linear-gradient(transparent,#fff,#2598f3);
+    transform: translateY(110%);
+  }
+}
+.moon {
+  position: absolute;
+  top: 100px;
+  left: 25%;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.description {
+  position: relative;
+  color: white;
+  text-align: center;
+  top: 250px;
+
+  @media screen and (max-width: $bp480) {
+    transform: translateX(-50%);
+  }
+  font-size: 2rem;
+  @media screen and (min-width: $bp480) {
+    position: absolute;
+    top: 132px;
+    left: calc(25% + 150px);
+    font-size: 2rem;
+  }
+}
+.moon::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(#111425, #3751e0);
+  background-attachment: fixed;
+  opacity: 1;
+  
+}
+.forest {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scale(1.2);
+  transition: 1s;
+}
+.bg{
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  transition: 0.5s;
+  z-index: 500;
+  transform: translateY(110%);
+}
+.scene i {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  animation: animate linear infinite;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+.cloud {
+  position: absolute;
+  max-width: 600px;
+  left: 0;
+  z-index: 1000;
+}
+.cloud__1 {
+  animation: animateCloud 50s linear infinite;
+}
+.cloud__2 {
+  animation: animateCloud 35s linear infinite;
+}
+.cloud__3 {
+  animation: animateCloud 80s linear infinite;
+}
+.cloud__4 {
+  max-width: 200px;
+  animation: animateCloud 70s linear infinite;
+  animation-delay: -20s;
+}
+.cloud__5 {
+  max-width: 500px;
+  animation: animateCloud 40s linear infinite;
+  animation-delay: -5s;
+}
+.cloud__6 {
+  max-width: 400px;
+  animation: animateCloud 30s linear infinite;
+  animation-delay: -10s;
+}
+img {
+  pointer-events: none;
+}
+
+@keyframes animateCloud {
+  0% {
+    transform: translateX(-100%) scale(1);
+  }
+  100% {
+    transform: translateX(400%) scale(1.5);
+  }
+}

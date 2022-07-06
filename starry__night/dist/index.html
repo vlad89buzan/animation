@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' rel='stylesheet'>
+	
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="css/style.min.css">
+
+	<title>Главная</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main>
+			<div class="scene">
+				<div class="moon"></div>
+				<p class="description animate__pulse animate__animated animate__infinite">Click on Moon</p>
+				<img src="img/forest.png" class="forest">
+				<img src="img/bg.png" class="bg">
+				<img src="img/cloud1.png" alt="" class="cloud__1 cloud">
+				<img src="img/cloud2.png" alt="" class="cloud__2 cloud">
+				<img src="img/cloud3.png" alt="" class="cloud__3 cloud">
+				<img src="img/cloud1.png" alt="" class="cloud__4 cloud">
+				<img src="img/cloud2.png" alt="" class="cloud__5 cloud">
+				<img src="img/cloud3.png" alt="" class="cloud__6 cloud">
+			</div>
+		</main>
+	</div>
+	<script>
+		let scene = document.querySelector('.scene');
+		let moon = document.querySelector('.moon');
+		let description = document.querySelector('.description');
+		moon.addEventListener('click', () => {
+			console.log(scene);
+			scene.classList.toggle('active');
+			description.textContent = (scene.classList.contains('active')) ? 'Click on Sun' : 'Click on Moon';
+		})
+
+		function stars() {
+
+			let count = 300;
+			let i = 0;
+			while (i < 500) {
+
+				let star = document.createElement('i');
+				let x = Math.floor(Math.random() * window.innerWidth);
+				let y = Math.floor(Math.random() * window.innerHeight);
+				let size = Math.random() * 2;
+
+				let duration = Math.random() * 10;
+
+				star.style.left = x + 'px';
+				star.style.top = y + 'px';
+				star.style.width = size + 'px';
+				star.style.height = size + 'px';
+				star.style.animationDuration = duration + 's';
+				star.style.animationDelay = duration + 's';
+
+				scene.appendChild(star);
+				i++
+			}
+		}
+		stars();
+
+	</script>
+</body>
+
+</html>
