@@ -27,5 +27,31 @@ main {
   flex: 1 1 100%;
   position: relative;
 }
+section{
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  span{
+    position: absolute;
+    background-color: white;
+    pointer-events: none;
+    
+    background-size: cover;
+    animation: animate 6s linear forwards;
+  }
+}
+
+@keyframes animate {
+  0%{
+    transform: translateY(-250px);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(1000%);
+    opacity: 1;
+  }
+}
 
 
