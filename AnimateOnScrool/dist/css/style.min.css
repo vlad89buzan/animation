@@ -480,3 +480,13 @@ main {
   text-align: justify;
   margin-bottom: 1rem;
 }
+
+.title {
+  position: absolute;
+  color: white;
+  text-align: center;
+  left: 0;
+  top: 200px;
+  width: 100%;
+  font-size: 2rem;
+}
