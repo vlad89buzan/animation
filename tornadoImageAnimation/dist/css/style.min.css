@@ -427,7 +427,7 @@ section span {
     opacity: 1;
   }
   100% {
-    transform: perspective(500px) rotateY(60deg) translateX(1000%);
+    transform: perspective(500px) rotateY(50deg) translateX(1000%);
     opacity: 0;
   }
 }
