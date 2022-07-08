@@ -31,6 +31,22 @@ section{
   height: 100vh;
   overflow: hidden;
   background-color: #000;
+  display: flex;
+  div{
+    flex: 0 0 50%;
+    p{
+      color: white;
+    }
+  }
+  .description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
   span{
     position: absolute;
     background-color: white;
