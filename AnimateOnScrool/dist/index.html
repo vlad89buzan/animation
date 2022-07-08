@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Главная</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		
+		<main>
+			<section class="bg">
+				<img src="img/bg.jpg" alt="bg" id="bg">
+				<img src="img/moon.png" alt="moon" id="moon">
+				<img src="img/cloud1.png" alt="cloud1" id="cloud1">
+				<img src="img/cloud2.png" alt="cloud2" id="cloud2">
+				<img src="img/jet.png" alt="jet" id="jet">
+				<img src="img/ironman.png" alt="ironman" id="ironman">
+
+			</section>
+			<section class="content">
+				<h2>My name's Tony Stark and I'mnot afraid of you</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in adipisci, enim officiis aut ipsum
+					minus soluta distinctio corporis voluptatibus ad porro ab sunt! Autem totam blanditiis voluptatum
+					sapiente officia quae voluptatibus porro incidunt, iusto aperiam commodi molestiae nemo beatae, ea,
+					labore reiciendis et laudantium dolorum! Expedita culpa esse quis ipsa error ea numquam autem
+					quibusdam minima unde, praesentium, consectetur velit enim incidunt obcaecati ullam similique
+					possimus porro necessitatibus minus consequatur facere? Delectus quasi officiis dolorum. Facilis
+					impedit sint doloribus rerum est aperiam veritatis id, repudiandae saepe harum expedita ratione.
+					Totam esse ipsam, animi incidunt, modi consequatur atque architecto, dolor quis recusandae sit
+					numquam perspiciatis dolorem maiores itaque dolorum cupiditate laudantium delectus corporis quasi
+					quidem! Esse quasi fugit qui nihil dicta ipsam quaerat consectetur aperiam, corrupti nobis?
+					Exercitationem earum voluptatibus alias quibusdam ullam eveniet sint? Accusantium, labore quidem
+					voluptates aperiam iure, vero ratione veniam illum vel placeat unde. Iure recusandae distinctio
+					commodi est repudiandae maxime mollitia sit rem nemo porro, quidem laudantium autem quasi magnam
+					exercitationem praesentium cupiditate placeat suscipit voluptatem velit vitae, aut corrupti ipsam.
+					Doloribus facere fugit unde, alias maxime, ex hic saepe ratione aliquid nisi enim inventore velit,
+					aut odio ea? Consequuntur ullam odio veniam esse! Recusandae, perspiciatis ab. A totam perferendis
+					quisquam id commodi omnis ipsum nihil maxime corporis at praesentium voluptatem unde quod autem quis
+					delectus nulla quo magni laborum, ex dolorem, sint fugiat aspernatur provident. Perferendis facere
+					perspiciatis, illo nisi quis necessitatibus velit distinctio beatae itaque assumenda saepe expedita
+					quisquam iste nemo officiis labore rem iure natus? Animi mollitia praesentium atque aliquid
+					excepturi autem, cum beatae ut iste repellat. Magni quod, nihil corporis laudantium ut sequi
+					dignissimos repellat explicabo, aliquid, voluptatem eius tempore quia? Ut dolor modi quae iste, sunt
+					odit voluptatem laudantium eveniet ipsa? Molestiae deleniti libero nesciunt facere reprehenderit
+					laboriosam fuga aperiam tempora! Debitis dolorem aliquam eius ullam rerum! Tenetur cum hic, mollitia
+					a ab ipsam perspiciatis similique architecto voluptate saepe quos facilis incidunt nisi! Praesentium
+					voluptates, vitae repellendus aliquid facere laborum odio fugiat quo adipisci aliquam minus nulla
+					facilis optio ab blanditiis debitis voluptatum dolor maiores quaerat quae enim dolores. Corporis
+					ipsam amet nemo expedita mollitia voluptatem modi eos, ad magnam dolor voluptate incidunt, minima
+					iure neque corrupti et possimus officia quo deserunt! Nam soluta, aperiam quis nisi fugiat
+					asperiores consequuntur, voluptatum earum blanditiis assumenda voluptate odit magnam quisquam,
+					tenetur dolorum! Eos quos molestias vero dicta exercitationem. Exercitationem ex voluptatum libero
+					corporis dolorem, quaerat quas quia est eum sit aliquam quibusdam similique voluptas quos deserunt
+					itaque nesciunt id autem atque molestias minus repellat! Repellendus itaque esse ab, debitis porro
+					quo maiores recusandae quae sint tenetur! Eaque similique ducimus corrupti nulla veniam atque sunt
+					vitae aliquam accusamus! Officia quis doloribus libero architecto numquam corrupti at alias neque
+					magnam itaque! Sint quaerat, nobis dolor qui alias eos quisquam adipisci officia earum, labore
+					facilis dicta voluptas vitae laudantium neque error perspiciatis quo enim deleniti dolores repellat.
+					Molestias provident dignissimos non tenetur. Minus similique libero voluptatibus, dignissimos a
+					inventore voluptas ullam natus, possimus officiis architecto.</p>
+				
+			</section>
+
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+			integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+			<script>
+			gsap.to('#bg', {
+				scrollTrigger: {
+					scrub:true
+				},
+				y:500,
+				scale: 1.5
+			}
+			)
+			gsap.to('#moon', {
+				scrollTrigger: {
+					scrub:true
+				},
+				x:-400,
+				scale: 2
+			}
+			)
+			gsap.to('#cloud1', {
+				scrollTrigger: {
+					scrub:true
+				},
+				x:-400,
+				
+			}
+			)
+			gsap.to('#cloud2', {
+				scrollTrigger: {
+					scrub:true
+				},
+				x:300,
+			
+			}
+			)
+			gsap.to('#jet', {
+				scrollTrigger: {
+					scrub:true
+				},
+				x:1000,
+				y:200,
+				scale: 4
+			}
+			)
+			gsap.to('#ironman', {
+				scrollTrigger: {
+					scrub:true
+				},
+				x:0,
+				y:-1800,
+				scale: 1,
+				rotate: -50
+			}
+			)
+		</script>
+		
+	</div>
+</body>
+
+</html>
