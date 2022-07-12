@@ -4,7 +4,6 @@
 //@import "mixins";
 // @import 'blocks/header';
 
-
 html,
 body {
   height: 100%;
@@ -20,12 +19,107 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
- 
 }
 
 main {
   flex: 1 1 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #162052;
+}
+.box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:hover {
+    &::before {
+      position: absolute;
+      content: "";
+      background: linear-gradient(315deg, #00ccff, #d400d4);
+      inset: -20px;
+    }
+    .content {
+      img {
+        opacity: 0;
+      }
+      .content{
+        &__text{
+          z-index: 3;
+        }
+      }
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    background: linear-gradient(315deg, #00ccff, #d400d4);
+    inset: -10px 140px;
+    transition: 0.4s;
+    animation: animate 4s linear infinite;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background: #162052;
+    inset: 6px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+.content {
+  position: absolute;
+  inset: 30px;
+  border: 6px solid #070a1c;
+  z-index: 3;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 250px;
+    gap: 20px;
+    h2 {
+      text-transform: uppercase;
+      color: white;
+    }
+    span{
+      font-size: 20px;
+    }
+    a{
+      background-color: white;
+      padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
 }
 
-
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
